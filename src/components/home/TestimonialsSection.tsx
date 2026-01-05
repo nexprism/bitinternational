@@ -1,4 +1,11 @@
 import { Star, Quote } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -50,33 +57,46 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-lg transition-shadow duration-300 relative"
-            >
-              <Quote className="w-10 h-10 text-coral/20 absolute top-4 right-4" />
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-coral text-coral" />
-                ))}
-              </div>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                "{testimonial.content}"
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 gradient-hero rounded-full flex items-center justify-center text-primary-foreground font-semibold">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
+        {/* Testimonials Carousel */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-full">
+                  <div className="bg-card border border-border rounded-2xl p-8 md:p-10 shadow-card relative">
+                    <Quote className="w-12 h-12 text-coral/20 absolute top-6 right-6" />
+                    <div className="flex gap-1 mb-6">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-coral text-coral" />
+                      ))}
+                    </div>
+                    <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed italic">
+                      "{testimonial.content}"
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 gradient-hero rounded-full flex items-center justify-center text-primary-foreground font-semibold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground text-lg">{testimonial.name}</h4>
+                        <p className="text-muted-foreground">{testimonial.role}</p>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center gap-4 mt-8">
+              <CarouselPrevious className="static translate-y-0 bg-card border-border hover:bg-coral hover:text-primary-foreground hover:border-coral" />
+              <CarouselNext className="static translate-y-0 bg-card border-border hover:bg-coral hover:text-primary-foreground hover:border-coral" />
             </div>
-          ))}
+          </Carousel>
         </div>
 
         {/* Client Logos */}
