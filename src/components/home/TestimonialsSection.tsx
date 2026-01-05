@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -27,6 +28,48 @@ const testimonials = [
     role: "Operations Manager, DataFlow Inc",
     content:
       "Outstanding support for our data center needs. Their team's technical expertise and 24/7 availability make them an invaluable partner.",
+    rating: 5,
+  },
+  {
+    name: "Anjali Patel",
+    role: "VP of Engineering, CloudSys",
+    content:
+      "The software licensing solutions from BIT International saved us significant costs while ensuring full compliance. Their team understands enterprise needs.",
+    rating: 5,
+  },
+  {
+    name: "David Wilson",
+    role: "Head of IT, NetPro Systems",
+    content:
+      "Exceptional service quality and technical expertise. BIT International helped us modernize our entire IT infrastructure seamlessly.",
+    rating: 5,
+  },
+  {
+    name: "Sunita Reddy",
+    role: "Managing Director, InnoSoft Labs",
+    content:
+      "Working with BIT International has been a game-changer for our business. Their cybersecurity solutions give us peace of mind.",
+    rating: 5,
+  },
+  {
+    name: "James Anderson",
+    role: "CFO, TechStart Inc",
+    content:
+      "Cost-effective licensing solutions with excellent support. BIT International helped us optimize our software spend by 40%.",
+    rating: 5,
+  },
+  {
+    name: "Meera Krishnan",
+    role: "CIO, DigitalFirst Corp",
+    content:
+      "Their consultancy team guided our digital transformation journey expertly. Highly professional and knowledgeable team.",
+    rating: 5,
+  },
+  {
+    name: "Robert Taylor",
+    role: "IT Manager, SecureData Ltd",
+    content:
+      "BIT International's 24/7 support and quick response time have been crucial for our operations. Truly reliable partners.",
     rating: 5,
   },
 ];
@@ -64,6 +107,12 @@ const TestimonialsSection = () => {
               align: "start",
               loop: true,
             }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
             className="w-full"
           >
             <CarouselContent className="-ml-4">
