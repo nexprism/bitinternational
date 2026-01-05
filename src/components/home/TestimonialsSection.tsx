@@ -1,91 +1,73 @@
 import { Star, Quote } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-
-const testimonials = [
-  {
-    name: "Rajesh Kumar",
-    role: "CTO, TechVision Solutions",
-    content:
-      "BIT International has been our trusted partner for software licensing for over 5 years. Their expertise and prompt service have helped us scale efficiently.",
-    rating: 5,
-  },
-  {
-    name: "Priya Sharma",
-    role: "IT Director, GlobalTech Corp",
-    content:
-      "The IT consultancy services provided by BIT International transformed our digital infrastructure. Highly recommend their strategic approach.",
-    rating: 5,
-  },
-  {
-    name: "Michael Chen",
-    role: "Operations Manager, DataFlow Inc",
-    content:
-      "Outstanding support for our data center needs. Their team's technical expertise and 24/7 availability make them an invaluable partner.",
-    rating: 5,
-  },
-  {
-    name: "Anjali Patel",
-    role: "VP of Engineering, CloudSys",
-    content:
-      "The software licensing solutions from BIT International saved us significant costs while ensuring full compliance. Their team understands enterprise needs.",
-    rating: 5,
-  },
-  {
-    name: "David Wilson",
-    role: "Head of IT, NetPro Systems",
-    content:
-      "Exceptional service quality and technical expertise. BIT International helped us modernize our entire IT infrastructure seamlessly.",
-    rating: 5,
-  },
-  {
-    name: "Sunita Reddy",
-    role: "Managing Director, InnoSoft Labs",
-    content:
-      "Working with BIT International has been a game-changer for our business. Their cybersecurity solutions give us peace of mind.",
-    rating: 5,
-  },
-  {
-    name: "James Anderson",
-    role: "CFO, TechStart Inc",
-    content:
-      "Cost-effective licensing solutions with excellent support. BIT International helped us optimize our software spend by 40%.",
-    rating: 5,
-  },
-  {
-    name: "Meera Krishnan",
-    role: "CIO, DigitalFirst Corp",
-    content:
-      "Their consultancy team guided our digital transformation journey expertly. Highly professional and knowledgeable team.",
-    rating: 5,
-  },
-  {
-    name: "Robert Taylor",
-    role: "IT Manager, SecureData Ltd",
-    content:
-      "BIT International's 24/7 support and quick response time have been crucial for our operations. Truly reliable partners.",
-    rating: 5,
-  },
-];
-
-const clientLogos = [
-  { name: "TechVision", initial: "TV" },
-  { name: "GlobalTech", initial: "GT" },
-  { name: "DataFlow", initial: "DF" },
-  { name: "CloudSys", initial: "CS" },
-  { name: "NetPro", initial: "NP" },
-  { name: "InnoSoft", initial: "IS" },
-];
-
+const testimonials = [{
+  name: "Rajesh Kumar",
+  role: "CTO, TechVision Solutions",
+  content: "BIT International has been our trusted partner for software licensing for over 5 years. Their expertise and prompt service have helped us scale efficiently.",
+  rating: 5
+}, {
+  name: "Priya Sharma",
+  role: "IT Director, GlobalTech Corp",
+  content: "The IT consultancy services provided by BIT International transformed our digital infrastructure. Highly recommend their strategic approach.",
+  rating: 5
+}, {
+  name: "Michael Chen",
+  role: "Operations Manager, DataFlow Inc",
+  content: "Outstanding support for our data center needs. Their team's technical expertise and 24/7 availability make them an invaluable partner.",
+  rating: 5
+}, {
+  name: "Anjali Patel",
+  role: "VP of Engineering, CloudSys",
+  content: "The software licensing solutions from BIT International saved us significant costs while ensuring full compliance. Their team understands enterprise needs.",
+  rating: 5
+}, {
+  name: "David Wilson",
+  role: "Head of IT, NetPro Systems",
+  content: "Exceptional service quality and technical expertise. BIT International helped us modernize our entire IT infrastructure seamlessly.",
+  rating: 5
+}, {
+  name: "Sunita Reddy",
+  role: "Managing Director, InnoSoft Labs",
+  content: "Working with BIT International has been a game-changer for our business. Their cybersecurity solutions give us peace of mind.",
+  rating: 5
+}, {
+  name: "James Anderson",
+  role: "CFO, TechStart Inc",
+  content: "Cost-effective licensing solutions with excellent support. BIT International helped us optimize our software spend by 40%.",
+  rating: 5
+}, {
+  name: "Meera Krishnan",
+  role: "CIO, DigitalFirst Corp",
+  content: "Their consultancy team guided our digital transformation journey expertly. Highly professional and knowledgeable team.",
+  rating: 5
+}, {
+  name: "Robert Taylor",
+  role: "IT Manager, SecureData Ltd",
+  content: "BIT International's 24/7 support and quick response time have been crucial for our operations. Truly reliable partners.",
+  rating: 5
+}];
+const clientLogos = [{
+  name: "TechVision",
+  initial: "TV"
+}, {
+  name: "GlobalTech",
+  initial: "GT"
+}, {
+  name: "DataFlow",
+  initial: "DF"
+}, {
+  name: "CloudSys",
+  initial: "CS"
+}, {
+  name: "NetPro",
+  initial: "NP"
+}, {
+  name: "InnoSoft",
+  initial: "IS"
+}];
 const TestimonialsSection = () => {
-  return (
-    <section className="py-12 md:py-16 bg-muted/50">
+  return <section className="py-1 md:py-16 bg-muted/50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -102,28 +84,19 @@ const TestimonialsSection = () => {
 
         {/* Testimonials Carousel */}
         <div className="mb-16">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            plugins={[
-              Autoplay({
-                delay: 4000,
-                stopOnInteraction: true,
-              }),
-            ]}
-            className="w-full"
-          >
+          <Carousel opts={{
+          align: "start",
+          loop: true
+        }} plugins={[Autoplay({
+          delay: 4000,
+          stopOnInteraction: true
+        })]} className="w-full">
             <CarouselContent className="-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+              {testimonials.map((testimonial, index) => <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="bg-card border border-border rounded-2xl p-6 shadow-card relative h-full">
                     <Quote className="w-10 h-10 text-coral/20 absolute top-4 right-4" />
                     <div className="flex gap-1 mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-coral text-coral" />
-                      ))}
+                      {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 fill-coral text-coral" />)}
                     </div>
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       "{testimonial.content}"
@@ -138,8 +111,7 @@ const TestimonialsSection = () => {
                       </div>
                     </div>
                   </div>
-                </CarouselItem>
-              ))}
+                </CarouselItem>)}
             </CarouselContent>
             <div className="flex justify-center gap-4 mt-8">
               <CarouselPrevious className="static translate-y-0 bg-card border-border hover:bg-coral hover:text-primary-foreground hover:border-coral" />
@@ -149,24 +121,8 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Client Logos */}
-        <div className="border-t border-border pt-12">
-          <p className="text-center text-muted-foreground mb-8 text-sm uppercase tracking-wider">
-            Trusted by Leading Companies
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {clientLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="w-20 h-20 bg-card border border-border rounded-xl flex items-center justify-center hover:border-coral/50 transition-colors duration-300"
-              >
-                <span className="text-xl font-bold text-primary">{logo.initial}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
