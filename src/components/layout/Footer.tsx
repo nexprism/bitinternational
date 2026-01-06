@@ -58,6 +58,8 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 { name: "About Us", path: "/about" },
+                { name: "Our Team", path: "/team" },
+                { name: "Careers", path: "/careers" },
                 { name: "Contact Us", path: "/contact" },
                 { name: "Privacy Policy", path: "/privacy" },
                 { name: "Terms & Conditions", path: "/terms" },
