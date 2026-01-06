@@ -80,7 +80,7 @@ const ContactFormSection = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <p className="text-muted-foreground text-sm">info@bitinternational.in</p>
+                    <p className="text-muted-foreground text-sm">support@bit-international.net</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

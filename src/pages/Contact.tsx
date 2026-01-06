@@ -168,7 +168,7 @@ const Contact = () => {
                   {
                     icon: Mail,
                     title: "Email Us",
-                    content: "info@bitinternational.in",
+                    content: "support@bit-international.net",
                     subContent: "We respond within 24 hours",
                   },
                   {
