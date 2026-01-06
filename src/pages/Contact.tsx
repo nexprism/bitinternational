@@ -155,9 +155,15 @@ const Contact = () => {
                 {[
                   {
                     icon: MapPin,
-                    title: "Office Address",
-                    content: "New Delhi, India",
-                    subContent: "(Full address available upon request)",
+                    title: "India Office",
+                    content: "2031 C K1, CHB FLATS, Block 22, SECTOR 63",
+                    subContent: "Chandigarh, India 160047",
+                  },
+                  {
+                    icon: MapPin,
+                    title: "U.S.A Office",
+                    content: "North Carolina, Raleigh, NC 27617",
+                    subContent: "United States of America",
                   },
                   {
                     icon: Mail,
@@ -167,9 +173,9 @@ const Contact = () => {
                   },
                   {
                     icon: Phone,
-                    title: "Call Us",
-                    content: "+91 XXXX XXXXXX",
-                    subContent: "Monday to Saturday",
+                    title: "Toll Free Numbers",
+                    content: "1-800-987-0423",
+                    subContent: "1-800-986-4651",
                   },
                   {
                     icon: Clock,

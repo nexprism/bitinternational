@@ -81,8 +81,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-coral" />
+                <div className="text-primary-foreground/80">
+                  <p>2031 C K1, CHB FLATS, Block 22,</p>
+                  <p>SECTOR 63 Chandigarh, India 160047</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-3 text-sm">
+                <Globe className="w-4 h-4 mt-0.5 flex-shrink-0 text-coral" />
                 <span className="text-primary-foreground/80">
-                  New Delhi, India
+                  U.S.A: North Carolina, Raleigh, NC 27617
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
@@ -94,9 +101,12 @@ const Footer = () => {
                   info@bitinternational.in
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-sm">
+              <li className="flex items-start gap-3 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0 text-coral" />
-                <span className="text-primary-foreground/80">+91 XXXX XXXXXX</span>
+                <div className="text-primary-foreground/80">
+                  <p>Toll Free: 1-800-987-0423</p>
+                  <p>Toll Free: 1-800-986-4651</p>
+                </div>
               </li>
             </ul>
           </div>
