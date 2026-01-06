@@ -61,8 +61,17 @@ const ContactFormSection = () => {
                     <MapPin className="w-5 h-5 text-coral" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Office Address</p>
-                    <p className="text-muted-foreground text-sm">New Delhi, India</p>
+                    <p className="font-medium text-foreground">India Office</p>
+                    <p className="text-muted-foreground text-sm">2031 C K1, CHB FLATS, Block 22, SECTOR 63, Chandigarh 160047</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-coral/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-coral" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-foreground">U.S.A Office</p>
+                    <p className="text-muted-foreground text-sm">North Carolina, Raleigh, NC 27617</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -79,8 +88,8 @@ const ContactFormSection = () => {
                     <Phone className="w-5 h-5 text-coral" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
-                    <p className="text-muted-foreground text-sm">+91 XXXX XXXXXX</p>
+                    <p className="font-medium text-foreground">Toll Free</p>
+                    <p className="text-muted-foreground text-sm">1-800-987-0423 | 1-800-986-4651</p>
                   </div>
                 </div>
               </div>
